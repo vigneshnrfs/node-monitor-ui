@@ -1,0 +1,48 @@
+
+<section ng-controller="DashBoardController as vm" ng-init="vm.init()">
+    <md-toolbar class="md-primary">
+        <div class="md-toolbar-tools">
+            <h2>
+                <span></span>
+            </h2>
+            <span flex></span>
+            <md-input-container>
+                <label>Duration</label>
+                <input type="number" min="10" step="1" ng-model="vm.liveDuration" ng-change="vm.liveDurationChanged()" style="color:white;width:100px;">
+                <div class="hint" style="font-size: 8px;">Live duration in seconds</div>
+            </md-input-container>
+            <md-switch ng-model="vm.showGC" aria-label="Switch 1">
+                Show GC
+            </md-switch>
+        </div>
+    </md-toolbar>
+    <md-content layout-padding>
+
+        <h3 class="md-subheader" align="center">Dashboard</h3>
+
+        <div id="dashboard">
+            <div id="cpu_chart"></div>
+            <div id="memory_chart"></div>
+            <div style="height:50px;" id="filter"></div>
+        </div>
+
+
+        <md-button class="md-fab md-accent" ng-click="vm.togglePause()" aria-label="Freeze"
+                   style="position: fixed;bottom: 5px;right:5px;">
+            <md-icon ng-hide="vm.paused" md-svg-src="/ui/img/icons/pause.svg">
+                <md-tooltip md-direction="left">Freeze Data</md-tooltip>
+            </md-icon>
+            <md-icon ng-hide="!vm.paused" md-svg-src="/ui/img/icons/play.svg">
+                <md-tooltip md-direction="left">UnFreeze Data</md-tooltip>
+            </md-icon>
+        </md-button>
+
+        <md-button class="md-fab md-warn" ng-click="vm.clearData()" style="position: fixed;bottom: 75px;right:5px;">
+            <md-icon md-svg-src="/ui/img/icons/delete.svg">
+                <md-tooltip md-direction="left">Reset Data</md-tooltip>
+            </md-icon>
+
+        </md-button>
+    </md-content>
+
+</section>

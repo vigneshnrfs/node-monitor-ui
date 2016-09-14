@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/node_modules/angular-material/angular-material.css">
+
+</head>
+<body ng-cloak ng-controller="coreController">
+<!--
+  Your HTML content here
+-->
+
+<section flex layout-fill layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+
+    <md-toolbar layout="row" class="md-whiteframe-z1">
+        <div class="md-toolbar-tools">
+            <span flex></span>
+            <h3>Performance Metrics</h3>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+    <md-content flex ui-view>
+        <!--<section layout="column" layout-padding layout-margin flex>
+            <div class="md-whiteframe-2dp" flex="50">
+                <h3 class="md-subhead" align="center">CPU Usage</h3>
+                <div id="cpu_chart_div"></div>
+            </div>
+            <div class="md-whiteframe-2dp" flex="50">
+                <h3 class="md-subhead" align="center">Memory Usage</h3>
+                <div  id="memory_chart_div"></div>
+            </div>
+
+        </section>-->
+    </md-content>
+</section>
+
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="/node_modules/angular/angular.js"></script>
+<script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/node_modules/angular-animate/angular-animate.js"></script>
+<script src="/node_modules/angular-aria/angular-aria.js"></script>
+<script src="/node_modules/angular-messages/angular-messages.js"></script>
+<script src="/node_modules/pouchdb/dist/pouchdb.js"></script>
+
+<!-- Angular Material Library -->
+<script src="/node_modules/angular-material/angular-material.js"></script>
+
+<!-- Load Socket.io -->
+<script src="/socket.io/socket.io.js"></script>
+
+<!-- Load Google Chart -->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+<!-- Your application bootstrap  -->
+<script type="text/javascript">
+    /**
+     * You must include the dependency on 'ngMaterial'
+     */
+    angular.module('myApp', ['ngMaterial','ui.router']);
+</script>
+
+
+<script src="/ui/js/bootstrap.js"></script>
+<script src="/ui/js/services.js"></script>
+<script src="/ui/js/config.js"></script>
+<script src="/ui/js/routes.js"></script>
+<script src="/ui/js/controllers.js"></script>
+<script src="/ui/js/app.js"></script>
+
+
+</body>
+</html>
