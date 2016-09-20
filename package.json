@@ -1,12 +1,21 @@
 {
   "name": "node-monitor-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "node-monitor-ui provides a simple ui interface to look at realtime CPU & Memory usage, Garbage Collection (GC) events & Function triggers",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["dashboard","logs","monitor","metric","cpu usage","memory usage","function hooks","garbage collection"],
+  "keywords": [
+    "dashboard",
+    "logs",
+    "monitor",
+    "metric",
+    "cpu usage",
+    "memory usage",
+    "function hooks",
+    "garbage collection"
+  ],
   "author": "Vignesh Jagadeesh",
   "license": "ISC",
   "dependencies": {
