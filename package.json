@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "keywords": ["dashboard","logs","monitor","metric","cpu usage","memory usage","function hooks","garbage collection"],
+  "author": "Vignesh Jagadeesh",
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.0",
