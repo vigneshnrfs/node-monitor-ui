@@ -37,7 +37,7 @@ function exampleHook(){
 ```
 
 ## TODOs
-* Filter the graphs for a secific function lable.
-* Aggregate the GC events and provide statistical info such as the (frequency of occurance, average time of GC execution, etc.)
-* Aggregate idividual function execution and display the statistics (average cpu, memory, run time) for each of those functions.
+* Filter the graphs for a specific function label.
+* Aggregate the GC events and provide statistical info such as the (frequency of occurrence, average time of GC execution, etc.)
+* Aggregate individual function execution and display the statistics (average cpu, memory, run time) for each of those functions.
 * Collect the metrics data from multiple processes and display them on aggregated charts. 
