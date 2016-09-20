@@ -1,6 +1,6 @@
 {
   "name": "node-monitor-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "node-monitor-ui provides a simple ui interface to look at realtime CPU & Memory usage, Garbage Collection (GC) events & Function triggers",
   "main": "index.js",
   "scripts": {
