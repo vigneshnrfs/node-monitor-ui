@@ -5,6 +5,8 @@ node-monitor-ui provides a simple ui interface to look at realtime
 - RAM usage
 - Garbage Collection (GC) events
 - Function triggers
+
+[![Screen Shot 2016-09-20 at 10.12.03 AM.png](http://s15.postimg.org/5k5wha18r/Screen_Shot_2016_09_20_at_10_12_03_AM.png)](http://postimg.org/image/sydvt7j5z/)
     
 ## Installation
 node-monitor-ui uses es6 features and as such will work on node versions that support es6 explictly. For node v4.x you will have to add the flags `--harmony` and `--harmony_destructuring` during runtime of your node process.
