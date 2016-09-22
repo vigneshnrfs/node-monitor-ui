@@ -1,3 +1,4 @@
 node_modules
 node-monitor-ui.iml
 .idea
+*.log
