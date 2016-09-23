@@ -15,6 +15,11 @@ app.use('/node_modules', express.static(path.resolve('node_modules/node-monitor-
 
 io.on('connect', (socket) => {
   console.log('Client Connected');
+
+  socket.on('logs', (log)=> {
+    socket.broadcast.emit('logs',log);
+    console.log('00>', log);
+  })
 });
 
 

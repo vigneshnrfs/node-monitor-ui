@@ -2,9 +2,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/ui/css/angular-material.css">
+    <link rel="stylesheet" href="/ui/css/app.css">
 
 </head>
-<body ng-cloak ng-controller="coreController">
+<body ng-cloak>
 <!--
   Your HTML content here
 -->
@@ -16,6 +17,11 @@
             <span flex></span>
             <h3>Performance Metrics</h3>
             <span flex></span>
+            <span flex>
+                <md-button class="md-raised" ui-sref="dashboard">Metrics</md-button>
+                <md-button class="md-raised" ui-sref="logstream">Logs</md-button>
+
+            </span>
         </div>
     </md-toolbar>
     <md-content flex ui-view>

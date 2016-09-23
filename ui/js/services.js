@@ -16,14 +16,22 @@ app.service('Socket', ['$window', 'db', function ($window, db) {
 
   socket.on('stat', (msg)=> {
     //console.info('Stat Received',msg);
-    msg._id = `${msg.timestamp}_${msg._id}`;
+    msg._id = msg.timestamp.toString();
     db.put(msg).then(()=> {
       //console.log('DB Updated');
     }).catch((err)=> {
-      console.error('Error Occurred when adding log to db.', err);
-      console.log(new Date(msg.timestamp));
+      console.error('Error Occurred when adding log to db.', err,msg);
 
     });
+  });
+
+  socket.on('logs',(log)=>{
+    //console.info(log);
+    log.type = 'logstream';
+    log._id = log.timestamp.toString();
+    db.put(log).then().catch((err) => {
+      console.error('Error Occurred when adding logstream to db.',err,log);
+    })
   });
 
 

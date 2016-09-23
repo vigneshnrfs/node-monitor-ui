@@ -1,0 +1,51 @@
+
+<section flex layout-fill ng-controller="LogStreamController as vm" ng-init="vm.init()">
+
+
+    <md-subheader class="md-primary">
+        <div class="md-toolbar-tools">
+            <h2>
+                <span>Log Streams</span>
+            </h2>
+            <span flex></span>
+            <md-switch ng-model="vm.filters.info" ng-change="vm.evalFilters()" aria-label="Info">
+                info
+            </md-switch>
+            <md-switch ng-model="vm.filters.warn" ng-change="vm.evalFilters()" aria-label="Warn">
+                warn
+            </md-switch
+            ><md-switch ng-model="vm.filters.error" ng-change="vm.evalFilters()" aria-label="Error">
+                error
+            </md-switch>
+            <md-switch ng-model="vm.filters.debug" ng-change="vm.evalFilters()" aria-label="Debug">
+                debug
+            </md-switch>
+        </div>
+    </md-subheader>
+
+    <!-- Main Content -->
+    <md-content layout-margin id="log_wrapper">
+        <div ng-if="this.logs.length === 0" layout-margin>
+            <h2 class="md-title">No logs yet! Have you installed <a href="https://www.npmjs.com/package/winston-node-monitor-ui" target="_blank">winston-node-monitor-ui</a> to steam logs to the dashboard?</h2>
+        </div>
+        <div ng-repeat="log in vm.logs track by log._id" id="{{log._id}}">
+            <p ng-init="vm.scrollToView(log._id)">{{log.timestamp | date : 'dd/MM/yyyy-HH:MM:ss.sss'}} - <span ng-class="'log-level-'+log.level">{{log.level}}</span> - {{log.msg}} - {{log.meta}}</p>
+        </div>
+    </md-content>
+
+    <md-button class="md-fab md-accent" ng-click="vm.togglePause()" aria-label="Freeze"
+               style="position: fixed;bottom: 5px;right:5px;">
+        <md-icon ng-hide="vm.isPaused" md-svg-src="/ui/img/icons/pause.svg">
+            <md-tooltip md-direction="left">Stop AutoScroll</md-tooltip>
+        </md-icon>
+        <md-icon ng-hide="!vm.isPaused" md-svg-src="/ui/img/icons/play.svg">
+            <md-tooltip md-direction="left">Start AutoScroll</md-tooltip>
+        </md-icon>
+    </md-button>
+    <md-button class="md-fab md-warn" ng-click="vm.clearLogs()" style="position: fixed;bottom: 75px;right:5px;">
+        <md-icon md-svg-src="/ui/img/icons/delete.svg">
+            <md-tooltip md-direction="left">Clear Logs</md-tooltip>
+        </md-icon>
+    </md-button>
+
+</section>

@@ -11,7 +11,13 @@ myApp.config(function($stateProvider,$urlRouterProvider) {
     templateUrl: '/ui/views/dashboard.html'
   };
 
+  var logStreamState = {
+    name: 'logstream',
+    url: '/log-stream',
+    templateUrl: '/ui/views/log-streams.html'
+  };
 
   $stateProvider.state(dashboardState);
+  $stateProvider.state(logStreamState);
   $urlRouterProvider.otherwise('/dashboard');
 });

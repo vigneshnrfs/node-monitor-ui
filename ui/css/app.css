@@ -1,0 +1,15 @@
+.log-level-warn{
+    color: orange;
+}
+
+.log-level-info{
+    color:green;
+}
+
+.log-level-error{
+    color:red;
+}
+
+.log-level-debug{
+    color:blue;
+}
