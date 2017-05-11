@@ -33,6 +33,6 @@
     "monotonic-timestamp": "0.0.9",
     "pidusage": "^1.0.5",
     "shortid": "^2.2.6",
-    "socket.io": "^1.4.8"
+    "socket.io": "^2.0.1"
   }
 }
