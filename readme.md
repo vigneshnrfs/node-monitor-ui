@@ -1,5 +1,7 @@
 # node-monitor-ui
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/vigneshnrfs/node-monitor-ui.svg)](https://greenkeeper.io/)
+
 node-monitor-ui provides a simple ui interface to look at realtime 
 - CPU usage
 - RAM usage
